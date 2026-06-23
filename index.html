@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Jose Rafael Ramos | Portifólio </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Ícone da aba do navegador-->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- CSS -->
+    <link href="estilo.css" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navegação Fixa -->
+    <nav id="nav">
+        <a href="#inicio" class="ativo">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#formacao">Formação</a>
+        <a href="#portifolio">Portifólio</a>
+        <a href="#contato">Fale Comigo</a>
+
+        <!-- Botão de escolha de tema claro/escuro -->
+        <button id="btn-tema" title="Alternar para tema claro">🌙</button>
+    </nav>
+
+    <!-- Apresentação inicial Hero -->
+    <section id="inicio">
+        <div class="reveal">
+            <div class="logo">
+                <img src="logo.png" alt="Logo Rafael Ramos Dev" height="60">
+            </div>
+            <h1>Rafael<br><span>Ramos</span></h1>
+            <p>Estudante de Análise e Desenvolvimento de Sistemas na Uninter </p>
+        </div>
+    </section>
+
+    <!-- Seção "Sobre" (Perfil) -->
+    <section id="sobre">
+        <div class="reveal">
+            <p class="label">Sobre mim</p>
+            <h2>Olá, sou o Rafael.</h2>
+            <p><strong>31 anos |Piracicaba – SP | Análise e Desenvolvimneto de Sistemas </strong> <br> Estou no 4° semestre de análise e desenvolvimento de sistemas com foco em me tornar um profissional que construa soluções que agreguem valor real, não só linhas de código.</p>
+            <p>Durante a graduação tenho buscado aprender e desenvolver soluções web aplicando tecnologia de forma prática e objetiva.</p>
+            <p>Comprometido com qualidade e aprendizado contínuo, busco oportunidades onde possa contribuir com os aprendizados e evoluir</p>
+        </div>
+    </section>
+
+    <!-- Seção: Formação  -->
+    <section id="formacao">
+        <div class="reveal">
+            <p class="label">Trajetória</p>
+            <h2>Formação</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Análise e Desenvolvimento de Sistemas</h3>
+                        <p class="inst">Uninter</p>
+                        <span class="ano">2025 – 2027</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Técnico em Radiologia</h3>
+                        <p class="inst">Evolut Escolas Técnicas</p>
+                        <span class="ano">2023 – 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portifolio link do meu Github com os projetos  -->
+    <section id="portifolio">
+        <div class="reveal">
+            <p class="label">Trabalhos</p>
+            <h2>Portifólio</h2>
+            <p class="subtitulo">Veja meus projetos.</p>
+            <a class="btn-github" href="https://github.com/ORafaelRaamos" target="_blank">Acessar meu GitHub &rarr;</a>
+        </div>
+    </section>
+
+    <!-- Entre em contato -->
+    <section id="contato">
+        <div class="reveal">
+            <p class="label">Contato</p>
+            <h2>Fale Comigo</h2>
+            <p class="subtitulo">Escreva abaixo que entrarei em contato</p>
+
+            <!-- Confirmação de envio da Mensagem -->
+            <div id="msg-sucesso"> Mensagem enviada com sucesso!</div>
+
+            <!-- Mensagem de erro exibida em caso de validação falha -->
+            <div id="msg-erro"></div>
+
+            <form>
+                <div class="form-group">
+                    <label for="campo-nome">Nome</label>
+                    <input id="campo-nome" type="text" maxlength="50" placeholder="Seu nome" required />
+                </div>
+                <div class="form-group">
+                    <label for="campo-email">E-mail</label>
+                    <input id="campo-email" type="email" maxlength="300" placeholder="seu@email.com" required />
+                </div>
+                <div class="form-group">
+                    <label for="campo-mensagem">Mensagem</label>
+                    <textarea id="campo-mensagem" maxlength="5000" placeholder="Escreva sua mensagem..." required></textarea>
+                </div>
+                <button class="btn-enviar" type="submit">Enviar mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Desenvolvido por Rafael Ramos Todos os direitos reservados</p>
+    </footer>
+
+</body>
+</html>

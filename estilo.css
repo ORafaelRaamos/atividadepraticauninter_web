@@ -1,0 +1,399 @@
+/* Reset basico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis de cor baseadas na minha logo */
+:root {
+    --bg: #0a0a0a; 
+    --surface: #111111;
+    --border: rgba(255, 255, 255, 0.08);
+    --text: #f0f0f0;
+    --muted: #7a8a9a;
+    --accent: #4da6ff;
+    --accent-dark: #1a7fe8;
+    --accent-light: rgba(77, 166, 255, 0.12);
+}
+
+/* Rolar a tela de forma suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Base do corpo */
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Nav */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    padding: 14px 24px;
+    background: rgba(10, 10, 10, 0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+}
+
+/* Links da nav */
+nav a {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 14px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    transition: color 0.2s, background 0.2s;
+}
+
+/* Link ativo ou hover */
+nav a:hover,
+nav a.ativo {
+    color: var(--accent);
+    background: var(--accent-light);
+}
+
+/* Seções ocupam a tela inteira */
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 24px 80px;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* Animação de Entrada */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* Classe adicionada pelo JS quando a seção entra na tela */
+.reveal.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* HERO - logo */
+#inicio .logo {
+    margin-bottom: 32px;
+}
+
+#inicio .logo img {
+    display: block;
+}
+
+/* HERO - título principal */
+#inicio h1 {
+    font-size: clamp(36px, 6vw, 56px);
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+/* Destaque em azul no nome */
+#inicio h1 span {
+    color: var(--accent);
+}
+
+/* Subtítulo do hero */
+#inicio p {
+    color: var(--muted);
+    font-size: 18px;
+    max-width: 480px;
+    margin-bottom: 0;
+}
+
+/* Label de seção (ex: "Sobre mim") */
+.label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+/* Sobre */
+#sobre h2 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+#sobre p {
+    color: var(--muted);
+    margin-bottom: 16px;
+    font-size: 17px;
+}
+
+/* Destaque em branco dentro dos parágrafos */
+#sobre p strong {
+    color: var(--text);
+    font-weight: 500;
+}
+
+/* Formação */
+#formacao h2 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+/* Timeline vertical */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 24px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+/* Linha vertical conectando os itens */
+.timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 14px;
+    bottom: 0;
+    width: 1px;
+    background: var(--border);
+}
+
+/* Ponto azul da timeline */
+.timeline-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+    margin-top: 6px;
+}
+
+.timeline-content h3 {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+/* Nome da instituição */
+.timeline-content .inst {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+/* Badge de período */
+.timeline-content .ano {
+    font-size: 13px;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 2px 10px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+/* Portifóflio */
+#portifolio h2 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+#portifolio .subtitulo {
+    color: var(--muted);
+    margin-bottom: 32px;
+    font-size: 17px;
+}
+
+/* Botão do link de acesso para o GitHub */
+.btn-github {
+    display: inline-block;
+    text-decoration: none;
+    background: transparent;
+    color: var(--accent);
+    border: 0.5px solid var(--accent);
+    border-radius: 8px;
+    padding: 12px 32px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-github:hover {
+    background: var(--accent-light);
+}
+
+/* Contato */
+#contato h2 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+#contato > .subtitulo {
+    color: var(--muted);
+    margin-bottom: 40px;
+    font-size: 17px;
+}
+
+/* Grupo de campo do formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+/* Inputs e textarea */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: var(--text);
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+/* Borda azul ao focar no campo */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--accent);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Botão de envio do formulário */
+.btn-enviar {
+    background: var(--accent-dark);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 32px;
+    font-size: 15px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn-enviar:hover {
+    opacity: 0.85;
+}
+
+.btn-enviar:active {
+    transform: scale(0.98);
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    padding: 32px;
+    color: var(--muted);
+    font-size: 13px;
+    border-top: 0.5px solid var(--border);
+}
+
+/* RESPONSIVO - telas menores que 600px */
+@media (max-width: 600px) {
+    nav a {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+
+    section {
+        padding: 100px 20px 60px;
+    }
+}
+
+/* 
+   BOTÃO DE TEMA CLARO / ESCURO */
+#btn-tema {
+    background: transparent;
+    border: 0.5px solid var(--border);
+    border-radius: 20px;
+    color: var(--muted);
+    font-size: 16px;
+    padding: 4px 10px;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: background 0.2s;
+}
+
+#btn-tema:hover {
+    background: var(--accent-light);
+}
+
+/* 
+   MENSAGENS DO FORMULÁRIO
+    */
+#msg-sucesso {
+    display: none;
+    background: rgba(77, 166, 255, 0.1);
+    border: 0.5px solid var(--accent);
+    color: var(--accent);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+#msg-erro {
+    display: none;
+    background: rgba(226, 75, 74, 0.1);
+    border: 0.5px solid #e24b4a;
+    color: #e24b4a;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+/* 
+   TEMA CLARO
+    */
+body.tema-claro {
+    --bg: #f4f4f4;
+    --surface: #ffffff;
+    --border: rgba(0, 0, 0, 0.1);
+    --text: #111111;
+    --muted: #556070;
+    --accent: #1a7fe8;
+    --accent-dark: #1555c0;
+    --accent-light: rgba(26, 127, 232, 0.1);
+}
+
+body.tema-claro nav {
+    background: rgba(244, 244, 244, 0.92);
+}
