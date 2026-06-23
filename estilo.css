@@ -73,6 +73,7 @@ section {
     padding: 120px 24px 80px;
     max-width: 720px;
     margin: 0 auto;
+    scroll-margin-top: 60px; /* CORRIGIDO: evita que a nav fixa cubra o topo da seção */
 }
 
 /* Animação de Entrada */
@@ -212,7 +213,7 @@ section {
     display: inline-block;
 }
 
-/* Portifóflio */
+/* Portifólio */
 #portifolio h2 {
     font-size: 36px;
     font-weight: 500;
@@ -243,14 +244,14 @@ section {
     background: var(--accent-light);
 }
 
-/* Contato */
-#contato h2 {
+/* Contato - CORRIGIDO: era #contato, agora é #falecomigo */
+#falecomigo h2 {
     font-size: 36px;
     font-weight: 500;
     margin-bottom: 12px;
 }
 
-#contato > .subtitulo {
+#falecomigo > .subtitulo {
     color: var(--muted);
     margin-bottom: 40px;
     font-size: 17px;
